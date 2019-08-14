@@ -190,11 +190,14 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
+#temp
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
 #BOARD_SEPOLICY_DIRS += \
-#    $(DEVICE_PATH)/sepolicy
+    $(DEVICE_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
